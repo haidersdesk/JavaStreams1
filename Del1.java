@@ -72,7 +72,15 @@ public class Del1 {
                 .length();
         System.out.println("//*Total Number of Letter: " + count);
 
-
+              
+        //Counting the Total size of all letters  and average of string sizes using reduction
+       String result = austin1
+                .stream()
+                .reduce("",(a, element)->a+element);
+        System.out.println("//*All the Letter: " + result);
+        System.out.println("//*Total Number of Letter using reduce method: " + result.length());
+        System.out.println("//*Average Number of Strings: " + result.length()/totalNumofStrings);
+        
 
        //Predicate are all words less than 12?
         Predicate<String> p1 = x-> x.length() <12;
